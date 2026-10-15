@@ -1,0 +1,150 @@
+# Marbles OP Weapons 2 - config
+# After editing: /marbleweapons reload  (then give yourself a NEW weapon; old ones keep their old enchants/lore)
+# Keys: F or SHIFT_F. Times are in seconds. Hearts: 1 heart = 2 HP.
+
+weapons:
+  lifestealer:
+    enchantments: {sharpness: 5, fire_aspect: 2, unbreaking: 3, mending: 1}
+    unbreakable: true
+    abilities:
+      healthy_boi:
+        key: F
+        duration: 30
+        cooldown: 60
+        multiplier: 2.0
+      lifesteal:
+        enabled: true
+        hearts-per-kill: 0.5
+        max-bonus-hearts: 0
+      life_leach:
+        enabled: true
+        percent: 50
+
+  oathbreaker:
+    enchantments: {sharpness: 5, unbreaking: 3, mending: 1}
+    unbreakable: true
+    passives:
+      strength-level: 2
+      speed-level: 2
+    abilities:
+      blood_contract:
+        key: F
+        cooldown: 20
+        sacrifice-hearts: 3     # health you pay
+        hits: 3                 # empowered hits
+        bonus-hearts: 2         # extra damage per hit
+      final_clause:
+        key: SHIFT_F
+        cooldown: 30
+        radius: 8
+        damage-per-absorption-heart: 0.5   # hearts of damage per absorption heart consumed
+        max-damage-hearts: 5
+        knockback: 1.5
+
+  creator:
+    enchantments: {}
+    unbreakable: true
+    attack-damage-bonus: 0      # extra melee damage on the axe (0 = none)
+    passives:
+      golem-strength-level: 2
+      golem-resistance-level: 1
+      domain-resistance-level: 1
+    abilities:
+      created_construct:
+        key: F
+        cooldown: 120
+        duration: 60
+        amount: 10
+      isolation_barrier:
+        key: SHIFT_F
+        cooldown: 180
+        size: 50                # cube size (50 = 50x50x50)
+        max-distance: 20        # max distance to your target
+        target-window: 10       # seconds after hitting a player with the staff that you can use it on them
+        trap-participants: true # you and your target can't leave the cube
+        max-duration: 0         # seconds, 0 = lasts until one of you dies
+
+  stormbreaker:
+    enchantments: {quick_charge: 3, piercing: 4, unbreaking: 3, mending: 1}
+    unbreakable: true
+    abilities:
+      volley:
+        key: F
+        cooldown: 20
+        bolts: 3
+        damage-hearts: 1
+      lockdown:
+        key: SHIFT_F
+        cooldown: 35
+        range: 30
+        duration: 6
+
+  gravity_end:
+    enchantments: {density: 5, unbreaking: 3, mending: 1}
+    unbreakable: true
+    abilities:
+      singularity:
+        key: F
+        cooldown: 35
+        range: 20
+        radius: 10
+        duration: 4
+      repulsion:
+        key: SHIFT_F
+        cooldown: 25
+        radius: 7
+        damage-hearts: 2
+
+  frostmourne:
+    enchantments: {sharpness: 5, efficiency: 5, unbreaking: 3, mending: 1}
+    unbreakable: true
+    abilities:
+      glacial_cleave:
+        key: F
+        cooldown: 25
+        range: 7
+        damage-hearts: 2
+        slow-seconds: 4
+      frozen_prison:
+        key: SHIFT_F
+        cooldown: 45
+        range: 20
+        duration: 3
+
+  nightfall:
+    enchantments: {sharpness: 5, fire_aspect: 2, unbreaking: 3, mending: 1}
+    unbreakable: true
+    abilities:
+      shadowstep:
+        key: F
+        cooldown: 20
+        range: 10
+        damage-hearts: 2
+      thousand_cuts:
+        key: SHIFT_F
+        cooldown: 35
+        range: 6
+        strikes: 5
+        damage-hearts: 0.5
+
+  grimoire:
+    enchantments: {unbreaking: 3, mending: 1}
+    unbreakable: true
+    attack-damage-bonus: 3
+    passives:
+      negative-effect-bonus: 0.2   # +20% duration on effects you apply
+    abilities:
+      forbidden_spell:
+        key: F
+        cooldown: 25
+        duration: 5
+      arcane_cataclysm:
+        key: SHIFT_F
+        cooldown: 45
+        range: 20
+        radius: 5
+        damage-hearts: 3
+
+trust:
+  block-weapon-damage: true
+  mutual: false
