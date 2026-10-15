@@ -1,0 +1,13 @@
+name: MarblesOPWeapons2
+version: 1.0
+main: me.marbles.weapons.MarblesOPWeapons2
+api-version: "1.21"
+commands:
+  marbleweapons:
+    description: Give Marbles OP weapons
+    usage: /marbleweapons give <weapon> [player]
+    aliases: [mw]
+    permission: marbles.weapons.give
+permissions:
+  marbles.weapons.give:
+    default: op
